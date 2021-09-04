@@ -1,4 +1,4 @@
-package it.matty.kit.creator;
+package it.matty.kit.builder;
 
 import it.matty.kit.manager.IKitManager;
 import it.matty.kit.objects.PlayerKit;
