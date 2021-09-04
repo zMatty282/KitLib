@@ -8,5 +8,5 @@ import java.util.List;
 @Data
 public class PlayerKit {
     private final String name;
-    private final List<IKitItem> items = Lists.newArrayList();
+    private final List<IKitItem> items;
 }

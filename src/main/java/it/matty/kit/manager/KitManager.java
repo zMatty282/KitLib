@@ -3,10 +3,12 @@ package it.matty.kit.manager;
 import com.google.common.collect.Sets;
 import it.matty.kit.objects.IKitItem;
 import it.matty.kit.objects.PlayerKit;
+import lombok.Getter;
 import org.bukkit.entity.Player;
 
 import java.util.Set;
 
+@Getter
 public class KitManager implements IKitManager {
     private final Set<PlayerKit> kits = Sets.newHashSet();
 
