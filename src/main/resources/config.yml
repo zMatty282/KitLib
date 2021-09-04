@@ -1,0 +1,9 @@
+testkit:
+  item1:
+    material: IRON_SWORD
+    name: "Sword"
+    amount: 1
+    lore:
+      - "Line 1"
+    enchants:
+      - SHARPNESS#3

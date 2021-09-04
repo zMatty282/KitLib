@@ -21,8 +21,8 @@ public class ItemKitBuilder {
 
         if(file.getConfigurationSection(path + ".enchants") == null) return;
 
-        for(String key : file.getConfigurationSection(path + ".enchants").getKeys(true)) {
-            String[] enchant = file.getString(path + ".enchants." + key).split("#");
+        for(String key : file.getStringList(path + ".enchants")) {
+            String[] enchant = key.split("#");
             if(enchant.length != 2) continue;
 
             itemStack.addEnchantment(Enchantment.getByName(enchant[0]), Integer.parseInt(enchant[1]));

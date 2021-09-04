@@ -43,14 +43,6 @@ public class ItemBuilder {
         return this;
     }
 
-    public ItemBuilder addEnchant(Enchantment enchantment, int level, boolean hide) {
-        itemMeta.addEnchant(enchantment, level, true);
-
-        assert hide;
-        itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-        return this;
-    }
-
     public ItemStack build() {
         itemStack.setItemMeta(itemMeta);
 
