@@ -12,14 +12,13 @@ public class ItemKitBuilder {
     private final int slot;
 
     public ItemKitBuilder(@NonNull FileConfiguration file, @NonNull String path) {
-
         this.slot = file.getInt(path + ".slot");
         this.itemStack = new ItemBuilder((Material) file.get(path + ".material"))
                 .setName(file.getString(path + ".name"))
                 .setLore(file.getStringList(path + ".lore"))
                 .setAmount(file.getInt(path + ".amount")).build();
 
-        if(file.getConfigurationSection(path + ".enchants") == null) return;
+        if(file.getStringList(path + ".enchants").isEmpty()) return;
 
         for(String key : file.getStringList(path + ".enchants")) {
             String[] enchant = key.split("#");
