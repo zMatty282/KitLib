@@ -1,13 +1,8 @@
 package it.matty.kit.builder.item;
 
 import com.google.common.collect.Lists;
-import com.mojang.authlib.GameProfile;
-import com.mojang.authlib.properties.Property;
-import lombok.SneakyThrows;
-import net.kyori.adventure.text.Component;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -24,7 +19,7 @@ public class ItemBuilder {
     }
 
     public ItemBuilder setName(String text) {
-        itemMeta.displayName(Component.translatable(text));
+        itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', text));
         return this;
     }
 
@@ -34,12 +29,13 @@ public class ItemBuilder {
     }
 
     public ItemBuilder setLore(List<String> lore) {
-        List<Component> componentList = Lists.newArrayList();
+        List<String> strings = Lists.newArrayList();
 
-        for (String s : lore)
-            componentList.add(Component.translatable(s));
+        for(String s : lore) {
+            strings.add(ChatColor.translateAlternateColorCodes('&', s));
+        }
 
-        itemMeta.lore(componentList);
+        itemMeta.setLore(strings);
         return this;
     }
 
