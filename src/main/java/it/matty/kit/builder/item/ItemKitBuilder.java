@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class ItemKitBuilder {
     private final ItemStack itemStack;
-    private int slot;
+    private final int slot;
 
     public ItemKitBuilder(@NonNull FileConfiguration file, @NonNull String path) {
         this.slot = file.getInt(path + ".slot");
@@ -30,11 +30,6 @@ public class ItemKitBuilder {
 
             itemStack.addEnchantment(Objects.requireNonNull(Enchantment.getByName(enchant[0])), Integer.parseInt(enchant[1]));
         }
-    }
-
-    public ItemKitBuilder setSlot(int i) {
-        this.slot = i;
-        return this;
     }
 
     public ItemKit build() {

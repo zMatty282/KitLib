@@ -1,4 +1,4 @@
-package it.matty.kit.objects;
+package it.matty.kit.objects.items;
 
 import org.bukkit.entity.Player;
 

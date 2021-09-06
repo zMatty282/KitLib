@@ -1,7 +1,6 @@
 package it.matty.kit.objects.items;
 
 import com.google.common.collect.Sets;
-import it.matty.kit.objects.IKitItem;
 import lombok.Data;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;

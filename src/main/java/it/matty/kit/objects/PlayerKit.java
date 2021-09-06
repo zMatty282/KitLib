@@ -1,5 +1,6 @@
 package it.matty.kit.objects;
 
+import it.matty.kit.objects.items.IKitItem;
 import lombok.Data;
 
 import java.util.List;

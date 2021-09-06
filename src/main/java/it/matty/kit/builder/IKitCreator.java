@@ -1,6 +1,6 @@
 package it.matty.kit.builder;
 
-import it.matty.kit.objects.IKitItem;
+import it.matty.kit.objects.items.IKitItem;
 
 import java.util.List;
 
